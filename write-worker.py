@@ -1,4 +1,4 @@
-import context from "./portfolio-context.json";
+﻿content = '''import context from "./portfolio-context.json";
 
 const ALLOWED_ORIGINS = [
   "http://localhost:3000",
@@ -132,3 +132,8 @@ ${JSON.stringify(context)}
     }
   }
 };
+'''
+
+with open('cloudflare-worker/worker.js', 'w', encoding='utf-8') as f:
+    f.write(content)
+print("worker.js written")

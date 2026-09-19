@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "Daniel Burbano",
   "title": "AI Engineer & Data Specialist",
   "bio": "Profesional enfocado en transformar datos en soluciones de valor. Especialista en Ciencia de Datos, Ingeniería de IA, automatización y creación de agentes inteligentes integrados con herramientas de negocio y procesos analíticos.",
@@ -16,19 +16,63 @@
     }
   ],
   "certifications": [
-    { "name": "Data Science, Analytics and Applied Machine Learning", "issuer": "Universidad de Tokio", "date": "ago. 2026" },
-    { "name": "Microsoft Applied Skills: Integrar herramientas del protocolo de contexto de modelo con agentes en Microsoft Foundry", "issuer": "Microsoft", "date": "ago. 2026" },
-    { "name": "Microsoft Applied Skills: Compilación de un agente en Microsoft Copilot Studio", "issuer": "Microsoft", "date": "ago. 2026" },
-    { "name": "Microsoft Applied Skills: Aceleración del desarrollo asistido por IA mediante GitHub Copilot", "issuer": "Microsoft", "date": "ago. 2026" },
-    { "name": "Big Data Foundations", "issuer": "IBM", "date": "jul. 2026" },
-    { "name": "AWS Academy Graduate — Generative AI Foundations", "issuer": "AWS", "date": "may. 2026" }
+    {
+      "name": "Data Science, Analytics and Applied Machine Learning",
+      "issuer": "Universidad de Tokio",
+      "date": "ago. 2026"
+    },
+    {
+      "name": "Microsoft Applied Skills: Integrar herramientas del protocolo de contexto de modelo con agentes en Microsoft Foundry",
+      "issuer": "Microsoft",
+      "date": "ago. 2026"
+    },
+    {
+      "name": "Microsoft Applied Skills: Compilación de un agente en Microsoft Copilot Studio",
+      "issuer": "Microsoft",
+      "date": "ago. 2026"
+    },
+    {
+      "name": "Microsoft Applied Skills: Aceleración del desarrollo asistido por IA mediante GitHub Copilot",
+      "issuer": "Microsoft",
+      "date": "ago. 2026"
+    },
+    {
+      "name": "Big Data Foundations",
+      "issuer": "IBM",
+      "date": "jul. 2026"
+    },
+    {
+      "name": "AWS Academy Graduate — Generative AI Foundations",
+      "issuer": "AWS",
+      "date": "may. 2026"
+    }
   ],
   "skills": [
-    "Python", "JavaScript", "Java", "C++", "HTML", "CSS",
-    "GitHub Copilot", "Codex", "Google Antigravity", "Claude Code", "Copilot Studio",
-    "RAG", "MCP (Model Context Protocol)", "Machine Learning", "Modelos Locales", "AI Agents",
-    "ETL/ELT Pipelines", "Data Management", "Bases de Datos",
-    "GitHub", "Microsoft Azure", "AWS"
+    "Python",
+    "JavaScript",
+    "Java",
+    "C++",
+    "HTML",
+    "CSS",
+    "GitHub Copilot",
+    "Codex",
+    "Google Antigravity",
+    "Claude Code",
+    "Copilot Studio",
+    "RAG",
+    "MCP (Model Context Protocol)",
+    "Machine Learning",
+    "Modelos Locales",
+    "AI Agents",
+    "ETL/ELT Pipelines",
+    "Data Management",
+    "Bases de Datos",
+    "GitHub",
+    "Microsoft Azure",
+    "AWS",
+    "Power BI",
+    "Microsoft Foundry",
+    "Microsoft Power Platform"
   ],
   "capabilities": {
     "AI Agents": [
@@ -65,40 +109,84 @@
     ]
   },
   "projects": [
-    { 
-      "name": "asuna-ml-agent", 
-      "summary": "Agente de ML avanzado para flujos de trabajo inteligentes.", 
+    {
+      "name": "asuna-ml-agent",
+      "summary": "Agente de ML avanzado para flujos de trabajo inteligentes.",
       "description": "Automatiza procesos analíticos complejos mediante modelos de machine learning y toma de decisiones. Demuestra habilidades prácticas en la creación de agentes autónomos.",
-      "capabilities": ["AI Agents", "Machine Learning", "Automatización"],
-      "technologies": ["Python", "Machine Learning", "LLMs", "RAG"]
+      "capabilities": [
+        "AI Agents",
+        "Machine Learning",
+        "Automatización"
+      ],
+      "technologies": [
+        "Python",
+        "Machine Learning",
+        "LLMs",
+        "RAG"
+      ]
     },
-    { 
-      "name": "telecom-churn-prediction", 
-      "summary": "Modelo predictivo de churn en el sector telecomunicaciones.", 
+    {
+      "name": "telecom-churn-prediction",
+      "summary": "Modelo predictivo de churn en el sector telecomunicaciones.",
       "description": "Identifica patrones de abandono de clientes utilizando pipelines de datos y algoritmos de clasificación. Demuestra competencias en analítica predictiva y machine learning.",
-      "capabilities": ["Machine Learning", "Data Engineering", "Analítica"],
-      "technologies": ["Python", "Pipelines", "Bases de Datos", "Algoritmos de Clasificación"]
+      "capabilities": [
+        "Machine Learning",
+        "Data Engineering",
+        "Analítica"
+      ],
+      "technologies": [
+        "Python",
+        "Pipelines",
+        "Bases de Datos",
+        "Algoritmos de Clasificación"
+      ]
     },
-    { 
-      "name": "devflow-engineering-analytics", 
-      "summary": "Sistema de analítica de productividad y flujo de desarrollo.", 
+    {
+      "name": "devflow-engineering-analytics",
+      "summary": "Sistema de analítica de productividad y flujo de desarrollo.",
       "description": "Procesa métricas de ingeniería para visualizar el rendimiento de equipos y cuellos de botella. Muestra capacidad para integrar datos y crear visualizaciones de valor de negocio.",
-      "capabilities": ["Data Engineering", "Data Management", "ETL/ELT"],
-      "technologies": ["Python", "Pipelines de Datos", "Bases de Datos"]
+      "capabilities": [
+        "Data Engineering",
+        "Data Management",
+        "ETL/ELT"
+      ],
+      "technologies": [
+        "Python",
+        "Pipelines de Datos",
+        "Bases de Datos"
+      ]
     },
-    { 
-      "name": "brujula-vocacional-knowledge", 
-      "summary": "Asistente de conocimiento vocacional basado en IA.", 
+    {
+      "name": "brujula-vocacional-knowledge",
+      "summary": "Asistente de conocimiento vocacional basado en IA.",
       "description": "Utiliza modelos NLP y arquitecturas RAG para guiar en decisiones académicas, demostrando capacidad de integrar bases de conocimiento con asistentes conversacionales.",
-      "capabilities": ["AI Agents", "RAG", "NLP"],
-      "technologies": ["LLMs", "Bases de Datos Vectoriales", "RAG", "Python"]
+      "capabilities": [
+        "AI Agents",
+        "RAG",
+        "NLP"
+      ],
+      "technologies": [
+        "LLMs",
+        "Bases de Datos Vectoriales",
+        "RAG",
+        "Python"
+      ]
     },
-    { 
-      "name": "fieldops-ai-agent", 
-      "summary": "Agente de IA diseñado para optimizar operaciones en campo.", 
+    {
+      "name": "fieldops-ai-agent",
+      "summary": "Agente de IA diseñado para optimizar operaciones en campo.",
       "description": "Procesa datos logísticos y de inventario en tiempo real para sugerir rutas y acciones, mostrando habilidades en IA aplicada a logística y operaciones.",
-      "capabilities": ["AI Agents", "Integración de Sistemas", "Automatización"],
-      "technologies": ["Python", "LLMs", "MCP", "APIs"]
+      "capabilities": [
+        "AI Agents",
+        "Integración de Sistemas",
+        "Automatización"
+      ],
+      "technologies": [
+        "Python",
+        "LLMs",
+        "MCP",
+        "APIs"
+      ]
     }
   ],
   "social": {

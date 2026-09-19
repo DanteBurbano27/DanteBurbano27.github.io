@@ -5,10 +5,10 @@ import { Sparkles, Send } from 'lucide-react'
 import MatrixText from '@/components/ui/MatrixText'
 
 const QUICK_PROMPTS = [
-  "¿Cuáles son sus principales habilidades??",
+  "¿Cuáles son sus principales habilidades?",
   "Cuéntame sobre sus proyectos",
-  "¿Qué certificaciones tiene??",
-  "¿Cuál es su formación académica??"
+  "¿Qué certificaciones tiene?",
+  "¿Cuál es su formación académica?"
 ]
 
 const LOADING_MESSAGES = [
@@ -48,7 +48,7 @@ export default function AIAssistantChat() {
       const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: q })
+        body: JSON.stringify({ message: q, history: history.slice(-4) })
       });
 
       if (!res.ok) {
@@ -81,7 +81,7 @@ export default function AIAssistantChat() {
       } else if (lowerQ.includes("github") || lowerQ.includes("contacto") || lowerQ.includes("linkedin")) {
         fallbackResponse = "Puedes contactarlo en LinkedIn o ver su código en GitHub. Los enlaces están disponibles en la sección de contacto de la página.";
       } else {
-        fallbackResponse = "El asistente está temporalmente fuera de línea. Diagnóstico: " + (err.message || "Fetch failed");
+        fallbackResponse = "El asistente está temporalmente fuera de línea.";
       }
 
       setHistory(prev => [...prev, { role: 'ai', content: fallbackResponse }]);

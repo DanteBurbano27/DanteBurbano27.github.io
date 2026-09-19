@@ -6,7 +6,8 @@
   await page.setViewport({ width: 1920, height: 1080 });
   
   console.log('Navigating to production...');
-  await page.goto('https://danteburbano27.github.io', { waitUntil: 'networkidle0' });
+  await page.goto('https://danteburbano27.github.io', { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await new Promise(r => setTimeout(r, 5000));
   
   await page.screenshot({ path: 'production_screenshot.png', fullPage: true });
   console.log('Screenshot saved to production_screenshot.png');

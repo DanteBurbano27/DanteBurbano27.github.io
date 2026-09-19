@@ -9,7 +9,7 @@ const skillCategories = [
     title: 'Inteligencia Artificial & Agentes',
     items: [
       { name: 'Machine Learning', icon: <BrainCircuit size={20} /> },
-      { name: 'GitHub Copilot', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' },
+      { name: 'GitHub Copilot', logoUrl: '/brands/github.svg' },
       { name: 'Codex de OpenAI', logoUrl: '/brands/openai.png' },
       { name: 'Claude Code', logoUrl: '/brands/anthropic.png' },
       { name: 'Copilot Studio', logoUrl: '/brands/microsoft-copilot.png' },
@@ -25,7 +25,7 @@ const skillCategories = [
   {
     title: 'DATA ENGINEERING',
     items: [
-      { name: 'Python', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg' },
+      { name: 'Python', logoUrl: '/brands/python.svg' },
       { name: 'ETL/ELT Pipelines', icon: <Database size={20} /> },
       { name: 'Data Management', icon: <Server size={20} /> },
       { name: 'Bases de Datos', icon: <Database size={20} /> },
@@ -34,19 +34,19 @@ const skillCategories = [
   {
     title: 'LANGUAGES',
     items: [
-      { name: 'JavaScript', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg' },
-      { name: 'HTML', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg' },
-      { name: 'CSS', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg' },
-      { name: 'Java', logoUrl: 'https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg' },
-      { name: 'C++', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg' },
+      { name: 'JavaScript', logoUrl: '/brands/javascript.svg' },
+      { name: 'HTML', logoUrl: '/brands/html.svg' },
+      { name: 'CSS', logoUrl: '/brands/css.svg' },
+      { name: 'Java', logoUrl: '/brands/java.svg' },
+      { name: 'C++', logoUrl: '/brands/cpp.svg' },
     ]
   },
   {
     title: 'CLOUD & DEVOPS',
     items: [
-      { name: 'Azure', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg' },
-      { name: 'AWS', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
-      { name: 'GitHub', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' },
+      { name: 'Azure', logoUrl: '/brands/azure.svg' },
+      { name: 'AWS', logoUrl: '/brands/aws.svg' },
+      { name: 'GitHub', logoUrl: '/brands/github.svg' },
     ]
   }
 ];

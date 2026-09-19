@@ -14,7 +14,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es">
       <body className="antialiased bg-cyber-bg min-h-screen text-cyber-textMain">
         <SmoothScroll>
-          <MatrixBackground />`n          <div className="fixed inset-0 pointer-events-none bg-radial-gradient z-0" />
+          <MatrixBackground />
+          <div className="fixed inset-0 pointer-events-none bg-radial-gradient z-0" />
           <Sidebar />
           <main className="md:ml-64 p-4 md:p-8 relative min-h-screen pb-24 md:pb-8 z-10">
             <div className="max-w-[1400px] mx-auto">

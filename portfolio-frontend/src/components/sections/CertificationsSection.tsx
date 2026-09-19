@@ -16,35 +16,35 @@ const certifications = [
     title: 'Microsoft Applied Skills: Integrar herramientas del protocolo de contexto de modelo con agentes en Microsoft Foundry',
     issuer: 'Microsoft',
     date: 'ago. 2026',
-    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg',
+    logoUrl: '/brands/microsoft.svg',
     credentialUrl: ''
   },
   {
     title: 'Microsoft Applied Skills: Compilación de un agente en Microsoft Copilot Studio',
     issuer: 'Microsoft',
     date: 'ago. 2026',
-    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg',
+    logoUrl: '/brands/microsoft.svg',
     credentialUrl: ''
   },
   {
     title: 'Microsoft Applied Skills: Aceleración del desarrollo asistido por IA mediante GitHub Copilot',
     issuer: 'Microsoft',
     date: 'ago. 2026',
-    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg',
+    logoUrl: '/brands/microsoft.svg',
     credentialUrl: ''
   },
   {
     title: 'Big Data Foundations',
     issuer: 'IBM',
     date: 'jul. 2026',
-    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg',
+    logoUrl: '/brands/ibm.svg',
     credentialUrl: ''
   },
   {
     title: 'AWS Academy Graduate — Generative AI Foundations',
     issuer: 'Amazon Web Services (AWS)',
     date: 'may. 2026',
-    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+    logoUrl: '/brands/aws.svg',
     credentialUrl: ''
   }
 ];
