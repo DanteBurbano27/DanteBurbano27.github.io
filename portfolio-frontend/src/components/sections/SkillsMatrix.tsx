@@ -1,0 +1,118 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { Box, Code2, Database, BrainCircuit, Terminal, Server, Layout, Cloud, GitBranch, Cpu, Bot, Rocket } from 'lucide-react';
+import Image from 'next/image';
+
+const skillCategories = [
+  {
+    title: 'Inteligencia Artificial & Agentes',
+    items: [
+      { name: 'Machine Learning', icon: <BrainCircuit size={20} /> },
+      { name: 'GitHub Copilot', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' },
+      { name: 'Codex de OpenAI', logoUrl: '/brands/openai.png' },
+      { name: 'Claude Code', logoUrl: '/brands/anthropic.png' },
+      { name: 'Copilot Studio', logoUrl: '/brands/microsoft-copilot.png' },
+      { name: 'Microsoft Foundry', logoUrl: '/brands/microsoft.png' },
+      { name: 'Power BI', logoUrl: '/brands/powerbi.png' },
+      { name: 'Microsoft Power Platform', logoUrl: '/brands/power-platform.png' },
+      { name: 'Google Antigravity', icon: <Rocket size={20} /> },
+      { name: 'RAG', icon: <Database size={20} /> },
+      { name: 'MCP', icon: <Box size={20} /> },
+      { name: 'Modelos Locales', icon: <Cpu size={20} /> },
+    ]
+  },
+  {
+    title: 'DATA ENGINEERING',
+    items: [
+      { name: 'Python', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg' },
+      { name: 'ETL/ELT Pipelines', icon: <Database size={20} /> },
+      { name: 'Data Management', icon: <Server size={20} /> },
+      { name: 'Bases de Datos', icon: <Database size={20} /> },
+    ]
+  },
+  {
+    title: 'LANGUAGES',
+    items: [
+      { name: 'JavaScript', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg' },
+      { name: 'HTML', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg' },
+      { name: 'CSS', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg' },
+      { name: 'Java', logoUrl: 'https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg' },
+      { name: 'C++', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg' },
+    ]
+  },
+  {
+    title: 'CLOUD & DEVOPS',
+    items: [
+      { name: 'Azure', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg' },
+      { name: 'AWS', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
+      { name: 'GitHub', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' },
+    ]
+  }
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3 } }
+};
+
+export default function SkillsMatrix() {
+  return (
+    <div className="w-full">
+      <div className="flex flex-col gap-6">
+        {skillCategories.map((category, catIdx) => (
+          <motion.div 
+            key={catIdx}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={containerVariants}
+          >
+            <h3 className="text-xs font-mono tracking-widest text-cyber-textMuted uppercase mb-3 pl-2 border-l border-cyber-primary/30">
+              {category.title}
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {category.items.map((skill, idx) => (
+                <motion.div 
+                  key={idx}
+                  variants={itemVariants}
+                  className="group relative flex items-center gap-3 px-3 py-2 bg-black/20 border border-white/5 rounded-xl hover:border-cyber-primary/40 hover:bg-cyber-primary/5 transition-all duration-300 overflow-hidden cursor-default"
+                >
+                  {/* Subtle hover glow */}
+                  <div className="absolute inset-0 bg-cyber-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-xl" />
+                  
+                  <div className="text-cyber-textMuted group-hover:text-cyber-primary transition-colors duration-300 flex items-center justify-center w-5 h-5 relative shrink-0 z-10">
+                    {skill.logoUrl ? (
+                       <Image 
+                         src={skill.logoUrl} 
+                         alt={skill.name} 
+                         fill 
+                         className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                       />
+                    ) : (
+                       skill.icon
+                    )}
+                  </div>
+                  <span className="text-sm font-medium text-white/70 group-hover:text-white transition-colors duration-300 z-10">
+                    {skill.name}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+
+
