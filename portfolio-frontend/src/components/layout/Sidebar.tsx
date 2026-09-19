@@ -50,7 +50,7 @@ export default function Sidebar() {
         <div className="absolute -inset-4 bg-cyber-primary/5 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         <div className="w-6 h-1 bg-cyber-primary mb-5 rounded-full" />
         <h2 className="text-xl font-extrabold text-white tracking-tight mb-1">D<span className="text-cyber-primary">B</span></h2>
-        <h1 className="text-[11px] text-cyber-textMuted/70 font-mono tracking-widest uppercase">Portfolio</h1>
+        <h1 className="text-[11px] text-cyber-textMuted/70 font-mono tracking-widest uppercase">Portafolio</h1>
       </div>
 
       <nav className="flex flex-row md:flex-col gap-1 md:gap-2 flex-1 items-center md:items-stretch justify-center md:justify-start min-w-max md:min-w-0 px-2 md:px-0 relative">
