@@ -16,21 +16,21 @@ const certifications = [
     title: 'Microsoft Applied Skills: Integrar herramientas del protocolo de contexto de modelo con agentes en Microsoft Foundry',
     issuer: 'Microsoft',
     date: 'ago. 2026',
-    logoUrl: '/brands/microsoft.svg',
+    logoUrl: '/brands/microsoft-symbol.svg',
     credentialUrl: ''
   },
   {
     title: 'Microsoft Applied Skills: Compilación de un agente en Microsoft Copilot Studio',
     issuer: 'Microsoft',
     date: 'ago. 2026',
-    logoUrl: '/brands/microsoft.svg',
+    logoUrl: '/brands/microsoft-symbol.svg',
     credentialUrl: ''
   },
   {
     title: 'Microsoft Applied Skills: Aceleración del desarrollo asistido por IA mediante GitHub Copilot',
     issuer: 'Microsoft',
     date: 'ago. 2026',
-    logoUrl: '/brands/microsoft.svg',
+    logoUrl: '/brands/microsoft-symbol.svg',
     credentialUrl: ''
   },
   {
@@ -67,7 +67,7 @@ export default function CertificationsSection() {
                 src={cert.logoUrl} 
                 alt={cert.issuer} 
                 fill
-                className="object-contain p-2 filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                className="object-contain p-2 opacity-90 group-hover:opacity-100 transition-all duration-300"
               />
             </div>
             
