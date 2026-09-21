@@ -12,13 +12,13 @@ const staticProjects = [
   },
   {
     name: 'telecom-churn-prediction',
-    description: 'Pipeline predictivo de extremo a extremo para detección de fuga de clientes (churn) en telecomunicaciones. Comprende análisis exploratorio riguroso, ingeniería de variables, segmentación de riesgo y evaluación de impacto de negocio.',
+    description: 'Pipeline reproducible de modelado de churn con CV exclusivo en entrenamiento y evaluación en holdout intacto. Las métricas del notebook histórico se conservan con reservas de validación; el análisis de negocio es un modelado de escenarios hipotéticos.',
     url: 'https://github.com/DanteBurbano27/telecom-churn-prediction',
-    tags: ['Data Science', 'Predictive Modeling', 'Risk Segmentation']
+    tags: ['Machine Learning', 'Predictive Modeling', 'Scenario Modeling']
   },
   {
     name: 'devflow-engineering-analytics',
-    description: 'Plataforma de ingeniería de datos para analítica de repositorios. Implementa ingesta de metadatos de GitHub, contratos tipados con Pydantic, validación automatizada de calidad de datos, modelos analíticos BigQuery-ready y orquestación con CI.',
+    description: 'Plataforma de ingeniería de datos para analítica de repositorios. Implementa contratos tipados basados en dataclasses de Python, ingesta de GitHub REST, 16 reglas deterministas de calidad de datos, artefactos JSON particionados, adaptador BigQuery mock-testeado y 155 pruebas automatizadas.',
     url: 'https://github.com/DanteBurbano27/devflow-engineering-analytics',
     tags: ['Data Engineering', 'Data Quality', 'GitHub API', 'CI/CD']
   },

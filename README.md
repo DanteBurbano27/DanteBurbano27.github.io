@@ -82,7 +82,7 @@ The embedded assistant (`daniel-portfolio-ai`) acts as a dedicated recruiter int
 
 ## Technical Stack
 
-- **Frontend**: Next.js 14 (`app` router, static export), React 18, TypeScript 5.2.
+- **Frontend**: Next.js 16 (`app` router, static export), React 18, TypeScript 5.2.
 - **Styling & UI**: Tailwind CSS, Framer Motion (micro-interactions & timeline animations), Lucide React.
 - **Edge Backend**: Cloudflare Workers (JavaScript, ES Modules).
 - **Edge AI Inference**: Cloudflare Workers AI (`@cf/meta/llama-3.1-8b-instruct-fast`).
@@ -97,8 +97,8 @@ The portfolio showcases verified projects across Data Science, Data Engineering,
 | Repository | Focus & Verified Scope |
 |---|---|
 | [`asuna-ml-agent`](https://github.com/DanteBurbano27/asuna-ml-agent) | Public architecture case study & `asuna-lite` reference implementation for ML lifecycle management and leakage review. |
-| [`telecom-churn-prediction`](https://github.com/DanteBurbano27/telecom-churn-prediction) | End-to-end customer churn predictive pipeline with exploratory data analysis, risk segmentation, and business impact estimation. |
-| [`devflow-engineering-analytics`](https://github.com/DanteBurbano27/devflow-engineering-analytics) | Data platform for GitHub engineering analytics: Pydantic typed contracts, automated data quality assertions, DuckDB/BigQuery SQL warehouse models, and CI orchestration. |
+| [`telecom-churn-prediction`](https://github.com/DanteBurbano27/telecom-churn-prediction) | Customer churn predictive pipeline featuring training-only cross-validation, untouched holdout evaluation, and hypothetical scenario modeling. |
+| [`devflow-engineering-analytics`](https://github.com/DanteBurbano27/devflow-engineering-analytics) | Engineering analytics data platform featuring Python dataclasses, 16 data-quality rules, partitioned JSON storage, and mock-tested BigQuery adapter. |
 | [`brujula-vocacional-knowledge`](https://github.com/DanteBurbano27/brujula-vocacional-knowledge) | Curated and governed knowledge base (RIASEC, O*NET Interest Profiler, SENA vocational materials) designed for bounded retrieval in Copilot Studio / RAG agents. |
 | [`fieldops-ai-agent`](https://github.com/DanteBurbano27/fieldops-ai-agent) | Field technical operations assistance system using Microsoft Copilot Studio, Telegram relay, and a custom Model Context Protocol (MCP) server for work orders and inventory. |
 
@@ -111,41 +111,54 @@ The deployment pipeline is managed via GitHub Actions ([`.github/workflows/deplo
 ```text
 pull_request
     ↓
-Build Validation (npm ci -> npm run build -> static export check) [No deployment]
+Build Validation (npm ci -> npm audit -> npm run build -> static export check)
+Worker Validation (node --test cloudflare-worker/test/worker.test.js)
+[No deployment]
 
 push main
     ↓
-Build Validation -> Upload Pages Artifact -> Deploy to GitHub Pages
+Build & Worker Validation -> Upload Pages Artifact -> Deploy to GitHub Pages
 ```
 
-1. **Pull Request Validation**: Runs on every PR targeting `main`. Verifies dependencies via `npm ci` and tests full static compilation via `npm run build`. Prevents broken builds from reaching production.
-2. **Production Deployment**: On push to `main`, executes build validation, emits the static export to `portfolio-frontend/out`, and deploys to GitHub Pages via `actions/deploy-pages@v4`.
+1. **Pull Request Validation**: Runs on every PR targeting `main`. Executes dependency audits (`npm audit --audit-level=moderate`), automated Cloudflare Worker unit tests, and full static compilation (`npm run build`). Prevents broken builds or insecure dependencies from reaching production.
+2. **Production Deployment**: On push to `main`, executes all validations, emits the static export to `portfolio-frontend/out`, and deploys to GitHub Pages via `actions/deploy-pages@v4`.
 
 ---
 
 ## Security Status & Secret Remediation
 
-- **Current Working Tree Status**: No secrets are tracked in the current hardened tree. The legacy backend, unversioned `.env`, SQLite databases, Python bytecode caches, and Wrangler caches have been completely removed from HEAD.
-- **Client/Edge Separation**: Frontend environment variables consume public endpoints (`NEXT_PUBLIC_AI_ENDPOINT`).
-- **Cloudflare Edge Protection**: Inference bindings are provisioned internally by Cloudflare Workers runtime (`[ai] binding = "AI"`) without exposing credentials to the browser.
-- **Git Hygiene**: Root `.gitignore` strictly rejects `.env*`, virtual environments, SQLite databases, Wrangler caches, and build outputs.
+```text
+CURRENT TREE: CLEAN
+LIVE CREDENTIAL STATUS: DECOMMISSIONED / REVOKED WITH EVIDENCE
+GIT HISTORY SANITIZATION: PENDING OWNER AUTHORIZATION
+```
 
-### Historical Credential Remediation Note
-> [!WARNING]
-> Deleting sensitive files from HEAD does **not** rewrite Git commit history. Historical commits on `main` still contain the legacy `.env` and configuration files.
->
-> 1. **Immediate Invalidation**: The secret key previously bound under `SECRET_KEY` in `portfolio-backend/.env` and `docker-compose.yml` must be treated as permanently compromised and rotated across any backend or service where it was configured.
-> 2. **Multi-Path Historical Audit**: A historical scan reveals sensitive strings were committed across three historical paths:
->    - `portfolio-backend/.env`
->    - `docker-compose.yml` (contained development secret key)
->    - `cloudflare-worker/.wrangler/cache/wrangler-account.json`
-> 3. **History Sanitization Plan**: Purging `portfolio-backend` alone is insufficient because `docker-compose.yml` and Wrangler cache reside outside that directory. If history rewriting is desired, Daniel should execute a multi-path filter on a fresh mirror clone:
->    ```bash
->    git clone --mirror https://github.com/DanteBurbano27/DanteBurbano27.github.io.git portfolio-history-clean
->    cd portfolio-history-clean
->    git filter-repo --invert-paths --path portfolio-backend --path docker-compose.yml --path cloudflare-worker/.wrangler
->    git push origin --force --all
->    ```
+### Three-Tier Security Assessment
+
+1. **Current Tree: CLEAN**
+   - No secrets, tokens, private keys, or environment files are tracked in the current hardened tree.
+   - The legacy backend, unversioned `.env`, SQLite databases, Python bytecode caches, and Wrangler caches have been completely removed from HEAD.
+   - Frontend consumes only public client-side endpoints (`NEXT_PUBLIC_AI_ENDPOINT`).
+   - Edge AI inference bindings are provisioned internally by the Cloudflare Workers runtime (`[ai] binding = "AI"`) without browser credentials.
+   - Root `.gitignore` strictly rejects `.env*`, virtual environments, SQLite databases, Wrangler caches, and build outputs.
+
+2. **Live Credential Status: DECOMMISSIONED / REVOKED WITH EVIDENCE**
+   - An audit of all historically committed configuration files was conducted (classified by name only):
+     - `portfolio-backend/.env`: Contained `GITHUB_USERNAME` (public configuration), `CORS_ORIGINS` (local development configuration), `REDIS_URL` (local container string), `DATABASE_URL` (local SQLite path), and `SECRET_KEY` (local development dummy key).
+     - `docker-compose.yml`: Contained local container configuration and the same local development dummy key.
+     - `cloudflare-worker/.wrangler/cache/wrangler-account.json`: Contained Cloudflare account metadata (`id`, `name`), but no API tokens or authentication secrets.
+   - **Status & Invalidation**: The legacy FastAPI backend and associated container services were permanently decommissioned and purged from HEAD. The historical development `SECRET_KEY` was only ever used by that local FastAPI service and cannot authenticate against any surviving, active, or external cloud system. No live cloud provider keys (AWS, GCP, OpenAI, Gemini, Cloudflare API tokens) were ever committed.
+
+3. **Git History Sanitization: PENDING OWNER AUTHORIZATION**
+   - Historical Git commits on `main` prior to the hardening PR still contain the legacy `.env` and configuration files in their commit objects.
+   - Because rewriting Git history alters commit SHA identifiers and requires force-pushing (`git push --force`), this step cannot be executed autonomously and requires explicit owner authorization.
+   - **Sanitization Command**: Upon owner approval, the multi-path filter can be executed on a fresh mirror clone:
+     ```bash
+     git clone --mirror https://github.com/DanteBurbano27/DanteBurbano27.github.io.git portfolio-history-clean
+     cd portfolio-history-clean
+     git filter-repo --invert-paths --path portfolio-backend --path docker-compose.yml --path cloudflare-worker/.wrangler
+     git push origin --force --all
+     ```
 
 ---
 

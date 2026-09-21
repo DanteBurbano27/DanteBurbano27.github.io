@@ -128,25 +128,25 @@
     },
     {
       "name": "telecom-churn-prediction",
-      "summary": "Pipeline predictivo de extremo a extremo para detección de churn.",
-      "description": "Pipeline predictivo de extremo a extremo para detección de fuga de clientes (churn) en telecomunicaciones. Comprende análisis exploratorio riguroso, ingeniería de variables, segmentación de riesgo y evaluación de impacto de negocio.",
+      "summary": "Pipeline reproducible de modelado de churn con CV exclusivo en entrenamiento.",
+      "description": "Pipeline reproducible de modelado de churn con validación cruzada exclusiva en entrenamiento y evaluación final en holdout intacto. Las métricas del notebook histórico se retienen con advertencias de validación; la reejecución empírica corregida está sujeta a confirmación de procedencia de datos. El análisis de negocio modela escenarios hipotéticos, no impacto causal medido.",
       "capabilities": [
-        "Data Science",
+        "Machine Learning",
         "Predictive Modeling",
-        "Risk Segmentation"
+        "Scenario Modeling"
       ],
       "technologies": [
         "Python",
         "scikit-learn",
         "pandas",
-        "EDA",
-        "Feature Engineering"
+        "Cross-Validation",
+        "Scenario Modeling"
       ]
     },
     {
       "name": "devflow-engineering-analytics",
-      "summary": "Plataforma de ingeniería de datos para analítica de repositorios.",
-      "description": "Plataforma de ingeniería de datos para analítica de repositorios. Implementa ingesta de metadatos de GitHub, contratos tipados con Pydantic, validación automatizada de calidad de datos, modelos analíticos BigQuery-ready y orquestación con CI.",
+      "summary": "Plataforma de ingeniería de datos para analítica de repositorios GitHub.",
+      "description": "Plataforma de ingeniería de datos para analítica de repositorios. Implementa contratos analíticos tipados basados en dataclasses de Python, ingesta vía GitHub REST, 16 reglas deterministas de calidad de datos, métricas de flota/repositorios, artefactos JSON particionados, adaptador BigQuery mock-testeado y SQL estáticamente verificado con 155 pruebas automatizadas (despliegue en BigQuery y Looker Studio fuera de V1).",
       "capabilities": [
         "Data Engineering",
         "Data Quality",
@@ -154,9 +154,10 @@
       ],
       "technologies": [
         "Python",
-        "Pydantic",
-        "GitHub API",
-        "DuckDB / BigQuery SQL",
+        "dataclasses",
+        "GitHub REST API",
+        "BigQuery SQL (static)",
+        "Pytest (155 tests)",
         "GitHub Actions"
       ]
     },
