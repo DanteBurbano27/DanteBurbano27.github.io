@@ -111,81 +111,91 @@
   "projects": [
     {
       "name": "asuna-ml-agent",
-      "summary": "Agente de ML avanzado para flujos de trabajo inteligentes.",
-      "description": "Automatiza procesos analíticos complejos mediante modelos de machine learning y toma de decisiones. Demuestra habilidades prácticas en la creación de agentes autónomos.",
+      "summary": "Caso de estudio de arquitectura pública y capa de referencia para ML lifecycle.",
+      "description": "Caso de estudio de arquitectura pública y capa de referencia para un asistente de ciclo de vida de Machine Learning. Demuestra perfilado de datos, mitigación heurística de fugas, comparación de modelos base y contendientes, estimación de probabilidades y puntuación por niveles de riesgo con Asuna Lite.",
       "capabilities": [
-        "AI Agents",
+        "Architecture Study",
         "Machine Learning",
-        "Automatización"
+        "Systems Design"
       ],
       "technologies": [
         "Python",
-        "Machine Learning",
-        "LLMs",
-        "RAG"
+        "scikit-learn",
+        "pandas",
+        "pytest",
+        "CLI Architecture"
       ]
     },
     {
       "name": "telecom-churn-prediction",
-      "summary": "Modelo predictivo de churn en el sector telecomunicaciones.",
-      "description": "Identifica patrones de abandono de clientes utilizando pipelines de datos y algoritmos de clasificación. Demuestra competencias en analítica predictiva y machine learning.",
+      "summary": "Pipeline reproducible de modelado de churn con CV exclusivo en entrenamiento.",
+      "description": "Pipeline reproducible de modelado de churn con validación cruzada exclusiva en entrenamiento y evaluación final en holdout intacto. Las métricas del notebook histórico se retienen con advertencias de validación; la reejecución empírica corregida está sujeta a confirmación de procedencia de datos. El análisis de negocio modela escenarios hipotéticos, no impacto causal medido.",
       "capabilities": [
         "Machine Learning",
-        "Data Engineering",
-        "Analítica"
+        "Predictive Modeling",
+        "Scenario Modeling"
       ],
       "technologies": [
         "Python",
-        "Pipelines",
-        "Bases de Datos",
-        "Algoritmos de Clasificación"
+        "scikit-learn",
+        "pandas",
+        "Cross-Validation",
+        "Scenario Modeling"
       ]
     },
     {
       "name": "devflow-engineering-analytics",
-      "summary": "Sistema de analítica de productividad y flujo de desarrollo.",
-      "description": "Procesa métricas de ingeniería para visualizar el rendimiento de equipos y cuellos de botella. Muestra capacidad para integrar datos y crear visualizaciones de valor de negocio.",
+      "summary": "Plataforma de ingeniería de datos para analítica de repositorios GitHub.",
+      "description": "Plataforma de ingeniería de datos para analítica de repositorios. Implementa contratos analíticos tipados basados en dataclasses de Python, ingesta vía GitHub REST, 16 reglas deterministas de calidad de datos, métricas de flota/repositorios, artefactos JSON particionados, adaptador BigQuery mock-testeado y SQL estáticamente verificado con 155 pruebas automatizadas (despliegue en BigQuery y Looker Studio fuera de V1).",
       "capabilities": [
         "Data Engineering",
-        "Data Management",
-        "ETL/ELT"
+        "Data Quality",
+        "CI/CD"
       ],
       "technologies": [
         "Python",
-        "Pipelines de Datos",
-        "Bases de Datos"
+        "dataclasses",
+        "GitHub REST API",
+        "BigQuery SQL (static)",
+        "Pytest (155 tests)",
+        "GitHub Actions"
       ]
     },
     {
       "name": "brujula-vocacional-knowledge",
-      "summary": "Asistente de conocimiento vocacional basado en IA.",
-      "description": "Utiliza modelos NLP y arquitecturas RAG para guiar en decisiones académicas, demostrando capacidad de integrar bases de conocimiento con asistentes conversacionales.",
+      "summary": "Base de conocimiento estructurada y gobernada para sistemas RAG y Copilot.",
+      "description": "Base de conocimiento estructurada y gobernada para sistemas RAG y agentes en Microsoft Copilot Studio. Integra taxonomías RIASEC del O*NET Interest Profiler, materiales vocacionales del SENA, marcos de la OIT y especificación de dataset de evaluación con límites éticos de respuesta.",
       "capabilities": [
-        "AI Agents",
-        "RAG",
-        "NLP"
+        "Knowledge Engineering",
+        "RAG Architecture",
+        "Data Governance"
       ],
       "technologies": [
-        "LLMs",
-        "Bases de Datos Vectoriales",
-        "RAG",
-        "Python"
+        "Knowledge Engineering",
+        "O*NET Interest Profiler",
+        "SENA vocational materials",
+        "OIT",
+        "Evaluation Dataset Specification",
+        "Microsoft Copilot Studio"
       ]
     },
     {
       "name": "fieldops-ai-agent",
-      "summary": "Agente de IA diseñado para optimizar operaciones en campo.",
-      "description": "Procesa datos logísticos y de inventario en tiempo real para sugerir rutas y acciones, mostrando habilidades en IA aplicada a logística y operaciones.",
+      "summary": "Asistencia técnica para operaciones en campo con Copilot Studio y MCP.",
+      "description": "Sistema de asistencia técnica para operaciones en campo integrado con Microsoft Copilot Studio y Telegram Relay. Implementa un servidor MCP para consulta de órdenes de trabajo, inventario, base técnica y registro idempotente de intervenciones.",
       "capabilities": [
         "AI Agents",
-        "Integración de Sistemas",
-        "Automatización"
+        "MCP Protocol",
+        "Copilot Studio"
       ],
       "technologies": [
-        "Python",
-        "LLMs",
-        "MCP",
-        "APIs"
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "Model Context Protocol SDK",
+        "Zod",
+        "Telegram Bot API",
+        "Microsoft Copilot Studio / Direct Line"
       ]
     }
   ],

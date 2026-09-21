@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { FolderGit2, Github, ChevronRight, ExternalLink } from 'lucide-react';
@@ -6,33 +6,33 @@ import { FolderGit2, Github, ChevronRight, ExternalLink } from 'lucide-react';
 const staticProjects = [
   {
     name: 'asuna-ml-agent',
-    description: 'Agente de ML avanzado para flujos de trabajo inteligentes. Automatiza procesos analíticos complejos mediante modelos de machine learning y toma de decisiones.',
+    description: 'Caso de estudio de arquitectura pública y capa de referencia para un asistente de ciclo de vida de Machine Learning. Demuestra perfilado de datos, mitigación heurística de fugas, comparación de modelos base/contendientes, probabilidades estimadas y puntuación por niveles de riesgo.',
     url: 'https://github.com/DanteBurbano27/asuna-ml-agent',
-    tags: ['Machine Learning', 'AI Agents', 'Python']
+    tags: ['Architecture Study', 'Machine Learning', 'Systems Design']
   },
   {
     name: 'telecom-churn-prediction',
-    description: 'Modelo predictivo de churn en el sector telecomunicaciones. Identifica patrones de abandono de clientes utilizando pipelines de datos y algoritmos de clasificación.',
+    description: 'Pipeline reproducible de modelado de churn con CV exclusivo en entrenamiento y evaluación en holdout intacto. Las métricas del notebook histórico se conservan con reservas de validación; el análisis de negocio es un modelado de escenarios hipotéticos.',
     url: 'https://github.com/DanteBurbano27/telecom-churn-prediction',
-    tags: ['Data Science', 'Predictive Modeling', 'ETL']
+    tags: ['Machine Learning', 'Predictive Modeling', 'Scenario Modeling']
   },
   {
     name: 'devflow-engineering-analytics',
-    description: 'Sistema de analítica de productividad y flujo de desarrollo. Procesa métricas de ingeniería para visualizar el rendimiento de equipos y cuellos de botella.',
+    description: 'Plataforma de ingeniería de datos para analítica de repositorios. Implementa contratos tipados basados en dataclasses de Python, ingesta de GitHub REST, 16 reglas deterministas de calidad de datos, artefactos JSON particionados, adaptador BigQuery mock-testeado y 155 pruebas automatizadas.',
     url: 'https://github.com/DanteBurbano27/devflow-engineering-analytics',
-    tags: ['Data Analytics', 'Engineering', 'Dashboard']
+    tags: ['Data Engineering', 'Data Quality', 'GitHub API', 'CI/CD']
   },
   {
     name: 'brujula-vocacional-knowledge',
-    description: 'Asistente de conocimiento vocacional basado en IA. Utiliza modelos NLP y arquitecturas RAG para guiar en decisiones académicas.',
+    description: 'Base de conocimiento estructurada y gobernada para sistemas RAG y agentes en Microsoft Copilot Studio. Integra taxonomías RIASEC del O*NET Interest Profiler, materiales vocacionales del SENA y especificación de evaluación para Colombia.',
     url: 'https://github.com/DanteBurbano27/brujula-vocacional-knowledge',
-    tags: ['RAG', 'NLP', 'Knowledge Base']
+    tags: ['Knowledge Engineering', 'RAG Architecture', 'Data Governance']
   },
   {
     name: 'fieldops-ai-agent',
-    description: 'Agente de IA diseñado para optimizar operaciones en campo. Procesa datos logísticos y de inventario en tiempo real para sugerir rutas y acciones.',
+    description: 'Sistema de asistencia técnica para operaciones en campo integrado con Microsoft Copilot Studio y Telegram Relay. Implementa un servidor MCP para consulta de órdenes de trabajo, inventario, base técnica y registro idempotente de intervenciones.',
     url: 'https://github.com/DanteBurbano27/fieldops-ai-agent',
-    tags: ['AI Agent', 'Optimization', 'Operations']
+    tags: ['AI Agents', 'MCP Protocol', 'Copilot Studio', 'Telegram Relay']
   }
 ];
 
