@@ -112,7 +112,7 @@
     {
       "name": "asuna-ml-agent",
       "summary": "Caso de estudio de arquitectura pública y capa de referencia para ML lifecycle.",
-      "description": "Caso de estudio de arquitectura pública y capa de referencia para un asistente de ciclo de vida de Machine Learning. Documenta el diseño de comandos, mitigación de data leakage, evaluación reproducible y recomendaciones prescriptivas con Asuna Lite.",
+      "description": "Caso de estudio de arquitectura pública y capa de referencia para un asistente de ciclo de vida de Machine Learning. Demuestra perfilado de datos, mitigación heurística de fugas, comparación de modelos base y contendientes, estimación de probabilidades y puntuación por niveles de riesgo con Asuna Lite.",
       "capabilities": [
         "Architecture Study",
         "Machine Learning",
@@ -163,17 +163,19 @@
     {
       "name": "brujula-vocacional-knowledge",
       "summary": "Base de conocimiento estructurada y gobernada para sistemas RAG y Copilot.",
-      "description": "Base de conocimiento estructurada y gobernada para sistemas RAG y agentes en Microsoft Copilot Studio. Integra taxonomías RIASEC, catálogo ocupacional CNO/SENA y compendios contextualizados para orientación vocacional en Colombia con límites éticos de respuesta.",
+      "description": "Base de conocimiento estructurada y gobernada para sistemas RAG y agentes en Microsoft Copilot Studio. Integra taxonomías RIASEC del O*NET Interest Profiler, materiales vocacionales del SENA, marcos de la OIT y especificación de dataset de evaluación con límites éticos de respuesta.",
       "capabilities": [
         "Knowledge Engineering",
         "RAG Architecture",
         "Data Governance"
       ],
       "technologies": [
-        "Knowledge Management",
-        "O*NET / SENA CNO",
-        "Microsoft Copilot Studio",
-        "RAG Benchmarking"
+        "Knowledge Engineering",
+        "O*NET Interest Profiler",
+        "SENA vocational materials",
+        "OIT",
+        "Evaluation Dataset Specification",
+        "Microsoft Copilot Studio"
       ]
     },
     {
@@ -186,11 +188,13 @@
         "Copilot Studio"
       ],
       "technologies": [
-        "Python",
-        "FastAPI",
-        "Model Context Protocol (MCP)",
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "Model Context Protocol SDK",
+        "Zod",
         "Telegram Bot API",
-        "Microsoft Copilot Studio"
+        "Microsoft Copilot Studio / Direct Line"
       ]
     }
   ],

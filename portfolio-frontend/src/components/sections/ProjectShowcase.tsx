@@ -6,7 +6,7 @@ import { FolderGit2, Github, ChevronRight, ExternalLink } from 'lucide-react';
 const staticProjects = [
   {
     name: 'asuna-ml-agent',
-    description: 'Caso de estudio de arquitectura pública y capa de referencia para un asistente de ciclo de vida de Machine Learning. Documenta el diseño de comandos, mitigación de data leakage, evaluación reproducible y recomendaciones prescriptivas con Asuna Lite.',
+    description: 'Caso de estudio de arquitectura pública y capa de referencia para un asistente de ciclo de vida de Machine Learning. Demuestra perfilado de datos, mitigación heurística de fugas, comparación de modelos base/contendientes, probabilidades estimadas y puntuación por niveles de riesgo.',
     url: 'https://github.com/DanteBurbano27/asuna-ml-agent',
     tags: ['Architecture Study', 'Machine Learning', 'Systems Design']
   },
@@ -24,7 +24,7 @@ const staticProjects = [
   },
   {
     name: 'brujula-vocacional-knowledge',
-    description: 'Base de conocimiento estructurada y gobernada para sistemas RAG y agentes en Microsoft Copilot Studio. Integra taxonomías RIASEC, catálogo ocupacional CNO/SENA y compendios contextualizados para orientación vocacional en Colombia.',
+    description: 'Base de conocimiento estructurada y gobernada para sistemas RAG y agentes en Microsoft Copilot Studio. Integra taxonomías RIASEC del O*NET Interest Profiler, materiales vocacionales del SENA y especificación de evaluación para Colombia.',
     url: 'https://github.com/DanteBurbano27/brujula-vocacional-knowledge',
     tags: ['Knowledge Engineering', 'RAG Architecture', 'Data Governance']
   },
