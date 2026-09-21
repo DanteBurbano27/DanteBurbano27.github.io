@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, TerminalSquare, Github, Linkedin, ChevronRight } from 'lucide-react';
+import { ArrowRight, Github, Linkedin } from 'lucide-react';
 import MatrixText from '@/components/ui/MatrixText';
 
 export default function HeroProfile() {
@@ -85,7 +85,7 @@ export default function HeroProfile() {
           className="absolute bottom-6 right-6 z-20 text-right hidden lg:block"
         >
           <p className="text-white/60 text-sm italic font-serif max-w-[200px] leading-relaxed">
-            "La tecnología tiene sentido cuando mejora la vida de las personas"
+            &quot;La tecnología tiene sentido cuando mejora la vida de las personas&quot;
           </p>
         </motion.div>
       </div>

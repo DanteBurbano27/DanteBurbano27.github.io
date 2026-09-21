@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FolderGit2, Github, ChevronRight, ExternalLink } from 'lucide-react';
+import { Github, ChevronRight, ExternalLink } from 'lucide-react';
 
 const staticProjects = [
   {

@@ -4,7 +4,7 @@ import ProjectShowcase from '@/components/sections/ProjectShowcase'
 import SkillsMatrix from '@/components/sections/SkillsMatrix'
 import CertificationsSection from '@/components/sections/CertificationsSection'
 import EducationSection from '@/components/sections/EducationSection'
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Github, Linkedin } from 'lucide-react'
 
 export default function Home() {
   return (
