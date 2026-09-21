@@ -1,13 +1,13 @@
 # Daniel Burbano — Professional Portfolio & AI Assistant
 
-[![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 [![Cloudflare Workers AI](https://img.shields.io/badge/Cloudflare-Workers_AI-F38020?logo=cloudflare)](https://developers.cloudflare.com/workers-ai/)
 [![CI / CD](https://img.shields.io/badge/CI-GitHub_Actions-2088FF?logo=github-actions)](https://github.com/DanteBurbano27/DanteBurbano27.github.io/actions)
 [![Deployment](https://img.shields.io/badge/Deployment-GitHub_Pages-222222?logo=github)](https://danteburbano27.github.io)
 
-An interactive portfolio featuring an edge-deployed, context-constrained AI assistant powered by Cloudflare Workers AI and Llama 3.1 8B. Built with Next.js 14 and statically exported to GitHub Pages.
+An interactive portfolio featuring an edge-deployed, context-constrained AI assistant powered by Cloudflare Workers AI and Llama 3.1 8B. Built with Next.js 16 and statically exported to GitHub Pages.
 
 ---
 
@@ -21,7 +21,7 @@ flowchart TD
     
     subgraph Frontend["Static Hosting Layer (GitHub Pages)"]
         Pages["GitHub Pages CDN"]
-        NextStatic["Next.js 14 Static Export (out/)"]
+        NextStatic["Next.js 16 Static Export (out/)"]
         ChatUI["AI Assistant Chat Component"]
     end
     
