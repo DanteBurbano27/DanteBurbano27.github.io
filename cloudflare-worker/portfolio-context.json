@@ -111,81 +111,86 @@
   "projects": [
     {
       "name": "asuna-ml-agent",
-      "summary": "Agente de ML avanzado para flujos de trabajo inteligentes.",
-      "description": "Automatiza procesos analíticos complejos mediante modelos de machine learning y toma de decisiones. Demuestra habilidades prácticas en la creación de agentes autónomos.",
+      "summary": "Caso de estudio de arquitectura pública y capa de referencia para ML lifecycle.",
+      "description": "Caso de estudio de arquitectura pública y capa de referencia para un asistente de ciclo de vida de Machine Learning. Documenta el diseño de comandos, mitigación de data leakage, evaluación reproducible y recomendaciones prescriptivas con Asuna Lite.",
       "capabilities": [
-        "AI Agents",
+        "Architecture Study",
         "Machine Learning",
-        "Automatización"
+        "Systems Design"
       ],
       "technologies": [
         "Python",
-        "Machine Learning",
-        "LLMs",
-        "RAG"
+        "scikit-learn",
+        "pandas",
+        "pytest",
+        "CLI Architecture"
       ]
     },
     {
       "name": "telecom-churn-prediction",
-      "summary": "Modelo predictivo de churn en el sector telecomunicaciones.",
-      "description": "Identifica patrones de abandono de clientes utilizando pipelines de datos y algoritmos de clasificación. Demuestra competencias en analítica predictiva y machine learning.",
+      "summary": "Pipeline predictivo de extremo a extremo para detección de churn.",
+      "description": "Pipeline predictivo de extremo a extremo para detección de fuga de clientes (churn) en telecomunicaciones. Comprende análisis exploratorio riguroso, ingeniería de variables, segmentación de riesgo y evaluación de impacto de negocio.",
       "capabilities": [
-        "Machine Learning",
-        "Data Engineering",
-        "Analítica"
+        "Data Science",
+        "Predictive Modeling",
+        "Risk Segmentation"
       ],
       "technologies": [
         "Python",
-        "Pipelines",
-        "Bases de Datos",
-        "Algoritmos de Clasificación"
+        "scikit-learn",
+        "pandas",
+        "EDA",
+        "Feature Engineering"
       ]
     },
     {
       "name": "devflow-engineering-analytics",
-      "summary": "Sistema de analítica de productividad y flujo de desarrollo.",
-      "description": "Procesa métricas de ingeniería para visualizar el rendimiento de equipos y cuellos de botella. Muestra capacidad para integrar datos y crear visualizaciones de valor de negocio.",
+      "summary": "Plataforma de ingeniería de datos para analítica de repositorios.",
+      "description": "Plataforma de ingeniería de datos para analítica de repositorios. Implementa ingesta de metadatos de GitHub, contratos tipados con Pydantic, validación automatizada de calidad de datos, modelos analíticos BigQuery-ready y orquestación con CI.",
       "capabilities": [
         "Data Engineering",
-        "Data Management",
-        "ETL/ELT"
+        "Data Quality",
+        "CI/CD"
       ],
       "technologies": [
         "Python",
-        "Pipelines de Datos",
-        "Bases de Datos"
+        "Pydantic",
+        "GitHub API",
+        "DuckDB / BigQuery SQL",
+        "GitHub Actions"
       ]
     },
     {
       "name": "brujula-vocacional-knowledge",
-      "summary": "Asistente de conocimiento vocacional basado en IA.",
-      "description": "Utiliza modelos NLP y arquitecturas RAG para guiar en decisiones académicas, demostrando capacidad de integrar bases de conocimiento con asistentes conversacionales.",
+      "summary": "Base de conocimiento estructurada y gobernada para sistemas RAG y Copilot.",
+      "description": "Base de conocimiento estructurada y gobernada para sistemas RAG y agentes en Microsoft Copilot Studio. Integra taxonomías RIASEC, catálogo ocupacional CNO/SENA y compendios contextualizados para orientación vocacional en Colombia con límites éticos de respuesta.",
       "capabilities": [
-        "AI Agents",
-        "RAG",
-        "NLP"
+        "Knowledge Engineering",
+        "RAG Architecture",
+        "Data Governance"
       ],
       "technologies": [
-        "LLMs",
-        "Bases de Datos Vectoriales",
-        "RAG",
-        "Python"
+        "Knowledge Management",
+        "O*NET / SENA CNO",
+        "Microsoft Copilot Studio",
+        "RAG Benchmarking"
       ]
     },
     {
       "name": "fieldops-ai-agent",
-      "summary": "Agente de IA diseñado para optimizar operaciones en campo.",
-      "description": "Procesa datos logísticos y de inventario en tiempo real para sugerir rutas y acciones, mostrando habilidades en IA aplicada a logística y operaciones.",
+      "summary": "Asistencia técnica para operaciones en campo con Copilot Studio y MCP.",
+      "description": "Sistema de asistencia técnica para operaciones en campo integrado con Microsoft Copilot Studio y Telegram Relay. Implementa un servidor MCP para consulta de órdenes de trabajo, inventario, base técnica y registro idempotente de intervenciones.",
       "capabilities": [
         "AI Agents",
-        "Integración de Sistemas",
-        "Automatización"
+        "MCP Protocol",
+        "Copilot Studio"
       ],
       "technologies": [
         "Python",
-        "LLMs",
-        "MCP",
-        "APIs"
+        "FastAPI",
+        "Model Context Protocol (MCP)",
+        "Telegram Bot API",
+        "Microsoft Copilot Studio"
       ]
     }
   ],
