@@ -19,17 +19,16 @@ export default function MatrixText({
   duration = 800,
 }: MatrixTextProps) {
   const [displayText, setDisplayText] = useState('');
-  const [isAnimating, setIsAnimating] = useState(true);
   const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     if (shouldReduceMotion) {
+      // Reduced-motion changes must replace animated text immediately after detection.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setDisplayText(text);
-      setIsAnimating(false);
       return;
     }
 
-    let start = 0;
     let animationFrame: number;
     let startTime: number | null = null;
 
@@ -61,8 +60,6 @@ export default function MatrixText({
 
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate);
-      } else {
-        setIsAnimating(false);
       }
     };
 

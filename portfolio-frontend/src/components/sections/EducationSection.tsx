@@ -1,7 +1,6 @@
 ﻿'use client';
 
 import { motion } from 'framer-motion';
-import { GraduationCap } from 'lucide-react';
 import Image from 'next/image';
 
 const educationList = [
@@ -66,7 +65,7 @@ export default function EducationSection() {
         className="mt-8 pt-6 border-t border-white/5 text-center"
       >
          <p className="text-[11px] italic font-serif text-cyber-textMuted/40 leading-relaxed max-w-[250px] mx-auto">
-           "La educación es la base para construir soluciones extraordinarias."
+           &quot;La educación es la base para construir soluciones extraordinarias.&quot;
          </p>
       </motion.div>
     </div>

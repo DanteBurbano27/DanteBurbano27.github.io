@@ -64,7 +64,7 @@ export default function AIAssistantChat() {
       } else {
         throw new Error("Invalid response format");
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("AI Error:", err);
       
       const lowerQ = q.toLowerCase();

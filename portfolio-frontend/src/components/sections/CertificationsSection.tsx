@@ -1,7 +1,7 @@
 ﻿'use client';
 
 import { motion } from 'framer-motion';
-import { Award, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 
 const certifications = [

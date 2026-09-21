@@ -13,6 +13,8 @@ export function UIStateProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    // This initializes state from a browser-only preference after hydration.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setReducedMotion(mediaQuery.matches)
     
     const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches)

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Box, Code2, Database, BrainCircuit, Terminal, Server, Layout, Cloud, GitBranch, Cpu, Bot, Rocket } from 'lucide-react';
+import { Box, Database, BrainCircuit, Server, Cpu, Rocket } from 'lucide-react';
 import Image from 'next/image';
 
 const skillCategories = [
