@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Box, Database, BrainCircuit, Server, Cpu, Rocket } from 'lucide-react';
+import { Box, Database, BrainCircuit, Server, Cpu } from 'lucide-react';
 import Image from 'next/image';
 
 const skillCategories = [
@@ -10,13 +10,11 @@ const skillCategories = [
     items: [
       { name: 'Machine Learning', icon: <BrainCircuit size={20} /> },
       { name: 'GitHub Copilot', logoUrl: '/brands/github.svg' },
-      { name: 'Codex de OpenAI', logoUrl: '/brands/openai.png' },
       { name: 'Claude Code', logoUrl: '/brands/anthropic.png' },
       { name: 'Copilot Studio', logoUrl: '/brands/microsoft-copilot.png' },
       { name: 'Microsoft Foundry', logoUrl: '/brands/microsoft.png' },
       { name: 'Power BI', logoUrl: '/brands/powerbi.png' },
       { name: 'Microsoft Power Platform', logoUrl: '/brands/power-platform.png' },
-      { name: 'Google Antigravity', icon: <Rocket size={20} /> },
       { name: 'RAG', icon: <Database size={20} /> },
       { name: 'MCP', icon: <Box size={20} /> },
       { name: 'Modelos Locales', icon: <Cpu size={20} /> },
